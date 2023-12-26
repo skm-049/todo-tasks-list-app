@@ -1,0 +1,311 @@
+:root{
+    --border:1px solid black;
+    --primary:rgb(89, 89, 89);
+    --secondary:rgb(7, 3, 83);
+    --ternary:rgba(9, 5, 81, 0.921);
+    --bg:linear-gradient(12deg, orange, red, yellow);
+}
+#root {
+  width: 100%;
+  min-height: 100vh; 
+  min-width: 360px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+h1{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin: 2rem auto;
+padding: 1rem 2rem;
+}
+h1:nth-child(1){
+  border-bottom: 2px solid black;
+
+}
+
+::-webkit-scrollbar {
+  height: 1px;
+  width: 4px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+input[type="text"], .task p{
+  outline: 1px solid rgb(94, 94, 94);
+  text-indent: 0.5rem;
+  padding: 0.25rem;
+  min-width: 280px;
+  max-width: 480px;
+  width: 100%;
+  overflow-x: scroll;
+  margin:0.5rem 1rem;
+  font-size: 1rem;
+  height: 2rem;
+  border: none;
+}
+
+input[type="text"]:hover, input[type="text"]:focus, .task p:hover{
+  outline:1px solid rgba(0, 0, 0, 0.778);
+}
+.task p{cursor: pointer;}
+
+input[type="submit"], button{
+  height: 2rem;
+  font-size:1.25rem;
+  cursor:pointer;
+  color:#ffffff;
+  margin:0.5rem 1rem;
+  padding: 0.25rem 1rem;
+  background-color: #414141;
+  min-width: 5rem;
+  outline: none;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  transition: transform ease 0.3s;
+}
+input[type="submit"]:hover, button:hover{
+  font-size: 1.2rem;
+  transform: rotateY(2deg);
+}
+#firstsection{
+  width:95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  /* border: 1px solid black; */
+
+}
+hr{
+  width:90%;
+  border: none;
+  margin: 0.5rem auto 2rem;
+  height: 1px;
+  background-color: rgb(33, 33, 33);
+}
+
+#taskInputForm{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#tasks-list{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+  
+}
+.task{
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid black; */
+
+}
+.updateInputForm{
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+
+}
+
+
+                /* notification  */
+#notification{
+  border:none;
+  outline: none;
+  background-color: transparent;
+}
+#notification p{
+  position: fixed;
+  top:4px;
+  left:-40vw;
+  opacity: 1;
+  animation: notification 3s ease-out  ;
+  background-color: rgb(37, 229, 159);
+  padding:0.5rem 1rem;
+  font-weight: 500;
+  text-indent: 0.5rem;
+  border-radius: 0 20px 20px 20px;
+  z-index: 1000;
+}                
+@keyframes notification {
+  from{opacity: 0;left: -40vw;}
+  20%{opacity: 1;}
+  40%{left:20vw;}
+  95%{opacity: 1;left: 20vw;}
+  100%{opacity: 0;left: 20vw;}
+}
+                /* celebration */
+
+.confetti{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1000;
+  /* border: 1px solid black; */
+}
+.confetti-piece{
+  position: absolute;
+  width:10px;
+  height: 30px;
+  background: #ffd300;
+  top:5%;
+  opacity:1;
+}
+.confetti-piece:nth-child(1){
+  left:7%;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  animation: makeItRain 1076ms ease-out 161ms infinite ;
+  -webkit-animation: makeItRain 1076ms ease-out 161ms infinite ;
+
+}
+.confetti-piece:nth-child(2){
+  left:86%;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  animation: makeItRain 1200ms ease-out 561ms infinite ;
+  -webkit-animation: makeItRain 1200ms ease-out 561ms infinite ;
+
+}
+.confetti-piece:nth-child(3){
+  left:58%;
+  transform: rotate(160deg);
+  -webkit-transform: rotate(60deg);
+  animation: makeItRain 966ms ease-out 241ms infinite ;
+  -webkit-animation: makeItRain 966ms ease-out 241ms infinite ;
+
+}
+.confetti-piece:nth-child(4){
+  left:50%;
+  transform: rotate(76deg);
+  -webkit-transform: rotate(76deg);
+  animation: makeItRain 741ms ease-out 61ms infinite ;
+  -webkit-animation: makeItRain 741ms ease-out 61ms infinite ;
+
+}
+.confetti-piece:nth-child(5){
+  left:69%;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(90deg);
+  animation: makeItRain 1076ms ease-out 161ms infinite ;
+  -webkit-animation: makeItRain 1076ms ease-out 161ms infinite ;
+
+}
+.confetti-piece:nth-child(6){
+  left:47%;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  animation: makeItRain 2223ms ease-out 665ms infinite ;
+  -webkit-animation: makeItRain 2223ms ease-out 665ms infinite ;
+
+}
+.confetti-piece:nth-child(7){
+  left:71%;
+  transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  animation: makeItRain 414ms ease-out 15ms infinite ;
+  -webkit-animation: makeItRain 414ms ease-out 15ms infinite ;
+
+}
+.confetti-piece:nth-child(8){
+  left:41%;
+  transform: rotate(-52deg);
+  -webkit-transform: rotate(-52deg);
+  animation: makeItRain 314ms ease-out 10ms infinite ;
+  -webkit-animation: makeItRain 314ms ease-out 10ms infinite ;
+
+}
+.confetti-piece:nth-child(9){
+  left:14%;
+  transform: rotate(-68deg);
+  -webkit-transform: rotate(-68deg);
+  animation: makeItRain 1111ms ease-out 365ms infinite ;
+  -webkit-animation: makeItRain 1111ms ease-out 365ms infinite ;
+
+}
+.confetti-piece:nth-child(10){
+  left:25%;
+  transform: rotate(-94deg);
+  -webkit-transform: rotate(-94deg);
+  animation: makeItRain 1201ms ease-out 126ms infinite ;
+  -webkit-animation: makeItRain 1201ms ease-out 126ms infinite ;
+
+}
+.confetti-piece:nth-child(11){
+  left:79%;
+  transform: rotate(-120deg);
+  -webkit-transform: rotate(-120deg);
+  animation: makeItRain 874ms ease-out 161ms infinite ;
+  -webkit-animation: makeItRain 874ms ease-out 161ms infinite ;
+
+}
+.confetti-piece:nth-child(12){
+  left:51%;
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  animation: makeItRain 698ms ease-out 114ms infinite ;
+  -webkit-animation: makeItRain 698ms ease-out 114ms infinite ;
+
+}
+.confetti-piece:nth-child(13){
+  left:95%;
+  transform: rotate(-102deg);
+  -webkit-transform: rotate(-102deg);
+  animation: makeItRain 1325ms ease-out 661ms infinite ;
+  -webkit-animation: makeItRain 1325ms ease-out 661ms infinite ;
+
+}
+.confetti-piece:nth-child(14){
+  left:72%;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  animation: makeItRain 996ms ease-out 411ms infinite ;
+  -webkit-animation: makeItRain 996ms ease-out 411ms infinite ;
+
+}
+.confetti-piece:nth-child(15){
+  left:34%;
+  transform: rotate(-365deg);
+  -webkit-transform: rotate(-365deg);
+  animation: makeItRain 987ms ease-out 141ms infinite ;
+  -webkit-animation: makeItRain 987ms ease-out 141ms infinite ;
+
+}
+.confetti-piece:nth-child(5n){width:8px; height:25px;background-color: red;}
+.confetti-piece:nth-child(6n){width:11px; height:23px;background-color: violet;}
+.confetti-piece:nth-child(8n){width:5px; height:13px;background-color: indigo;}
+.confetti-piece:nth-child(7n){width:9px; height:20px;background-color: blue;}
+.confetti-piece:nth-child(2n+1){width:15px; height:14px; background-color: green;}
+.confetti-piece:nth-child(9n){width:14px; height:18px;background-color: rgb(167, 167, 167);}
+.confetti-piece:nth-child(3n+1){width:7px; height:10px;background-color: rgb(255, 119, 0);}
+
+@keyframes makeItRain {
+  from{opacity: 0;}
+  30%{opacity: 1;}
+  to{transform: translateY(90vh);
+  -webkit-transform: translateY(90vh);}
+}
