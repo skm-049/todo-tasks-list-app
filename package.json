@@ -9,7 +9,7 @@
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
     "start-client": "cd client && npm run dev",
-    "all-install": "install-server && install-client",
+    "bun-install": "cd client && npm install && cd server && npm install",
   },
   "keywords": [],
   "author": "",
