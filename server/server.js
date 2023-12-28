@@ -1,18 +1,18 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-require("dotenv").config();
+// const express = require("express");
+// const cors = require("cors");
+// const mongoose = require("mongoose");
+// require("dotenv").config();
 
 /*  creating app with express  */
-const app = express();
+// const app = express();
 
 /*   setting up port  */
-const PORT = process.env.PORT || 80;
+// const PORT = process.env.PORT || 80;
 
 
 /*   connect database  */
 
-const uri = process.env.atlasDBUrl;
+// const uri = process.env.atlasDBUrl;
 // const uri = process.env.localDBUrl;
 const connectDB = async () => {
     try{ 
@@ -37,13 +37,35 @@ const connectDB = async () => {
 // app.use(express.json({ extended: false }));
 
 /*  to check the server responce  */
-app.get("/", (req, res) => res.send("Server up and running"));
+// app.get("/", (req, res) => res.send("Server up and running"));
 
 /*  import and use the texts router  */
 // const todosRouter = require("./routes/todos.js");
 // app.use("/api", todosRouter);
 
 /*  listening at the given port  */
-app.listen(PORT, "0.0.0.0" () => {
-    console.log(`server is running on PORT: ${PORT}`);
-});
+// app.listen(PORT, "0.0.0.0" () => {
+    // console.log(`server is running on PORT: ${PORT}`);
+// });
+
+
+
+
+
+
+
+
+
+
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
