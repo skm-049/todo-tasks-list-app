@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 80;
 
 /*   connect database  */
 
-const uri = process.env.altasDBUrl;
+const uri = process.env.atlasDBUrl;
 // const uri = process.env.localDBUrl;
 const connectDB = async () => {
     try{ 
@@ -31,7 +31,7 @@ connectDB();
 
 
 /*  cors  */
-app.use(cors({origin:true, credentials:true,}));
+app.use(cors({origin:"https://todo-tasks-list-app.vercel.app/", methods:["POST", "GET", "PUT", "DELETE"], credentials:true,}));
 
 /*   initialize middleware  */
 app.use(express.json({ extended: false }));
