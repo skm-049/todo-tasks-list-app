@@ -11,7 +11,7 @@ function NewTodo({setFetchButton}){
     if(newTask.title==="") return;
 
     axios
-      .post("http://localhost:80/api/add", newTask)
+      .post("http://todosappserverapi.vercel.app/api/add", newTask)
       .then((res)=>{
         setNewTask({title:""});
         setFetchButton(btn=>!btn);
@@ -41,7 +41,7 @@ function Task({setFetchButton, setShowNotification, taskData }){
     if(updateTask.title===""){return}
 
     axios
-      .put(`http://localhost:80/api/update/${updateTask._id}`, {"title":updateTask.title})
+      .put(`http://todosappserverapi.vercel.app/api/update/${updateTask._id}`, {"title":updateTask.title})
       .then((res)=>{
         setUpdateTask({});
         setFetchButton(btn=>!btn);
@@ -54,7 +54,7 @@ function Task({setFetchButton, setShowNotification, taskData }){
 
   function handleRemove(id){
     axios
-      .delete(`http://localhost:80/api/delete/${id}`)
+      .delete(`http://todosappserverapi.vercel.app/api/delete/${id}`)
       .then((res)=>{
         setFetchButton(btn=>!btn);
         console.log(res.data.message);
@@ -103,7 +103,7 @@ export default function App({}){
   //fetching todosList from Database
   useEffect(()=>{  
       axios
-        .get("http://localhost:80/api/")
+        .get("http://todosappserverapi.vercel.app/api/")
         .then((res)=>{
           console.log(res.data);
           setTasks(res.data);
@@ -124,7 +124,7 @@ export default function App({}){
     let isConfirm = window.confirm('Are you sure to delete All Tasks?');
     if(isConfirm){
       axios
-        .post("http://localhost:80/api/deleteAll" )
+        .post("http://todosappserverapi.vercel.app/api/deleteAll" )
         .then(()=>{
           setFetchButton(btn=>!btn);
         })
