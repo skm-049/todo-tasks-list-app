@@ -44,6 +44,6 @@ const todosRouter = require("./routes/todos.js");
 app.use("/api", todosRouter);
 
 /*  listening at the given port  */
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0" () => {
     console.log(`server is running on PORT: ${PORT}`);
 });
