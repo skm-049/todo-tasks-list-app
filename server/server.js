@@ -27,21 +27,21 @@ const connectDB = async () => {
         process.exit(1);
     }
  };
-connectDB();
+// connectDB();
 
 
 /*  cors  */
-app.use(cors({origin:"https://todo-tasks-list-app.vercel.app/", methods:["POST", "GET", "PUT", "DELETE"], credentials:true,}));
+// app.use(cors({origin:"https://todo-tasks-list-app.vercel.app/", methods:["POST", "GET", "PUT", "DELETE"], credentials:true,}));
 
 /*   initialize middleware  */
-app.use(express.json({ extended: false }));
+// app.use(express.json({ extended: false }));
 
 /*  to check the server responce  */
 app.get("/", (req, res) => res.send("Server up and running"));
 
 /*  import and use the texts router  */
-const todosRouter = require("./routes/todos.js");
-app.use("/api", todosRouter);
+// const todosRouter = require("./routes/todos.js");
+// app.use("/api", todosRouter);
 
 /*  listening at the given port  */
 app.listen(PORT, "0.0.0.0" () => {
