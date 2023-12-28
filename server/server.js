@@ -60,12 +60,12 @@ const connectDB = async () => {
 
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+ res.json({"message":"hii"})
 })
 
-app.listen(port, () => {
+app.listen(80, () => {
   console.log(`Example app listening on port ${port}`)
 })
