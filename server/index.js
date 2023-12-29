@@ -32,7 +32,7 @@ app.use(cors({credentials:this.true,}));
 app.use( express.json( { extended : false } ) );
 
 app.get('/', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
+  res.status(200).json('Welcome, app is working well');
 })
 
 /*      IMPORT AND USE THE ROUTERS      */
