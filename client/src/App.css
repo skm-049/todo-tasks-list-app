@@ -48,10 +48,9 @@ input[type="text"], .task p{
   min-width: 280px;
   max-width: 480px;
   width: 100%;
-  overflow-x: scroll;
   margin:0.5rem 1rem;
   font-size: 1rem;
-  height: 2rem;
+  line-height: 1.5rem;
   border: none;
 }
 
