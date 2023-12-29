@@ -35,9 +35,12 @@ app.get('/', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
 
+/*      IMPORT AND USE THE ROUTERS      */
+const todosRouter = require("./routes/todos.js");
+app.use("/api", todosRouter);
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at PORT: ${PORT}`);
 });
 
 // Export the Express API
